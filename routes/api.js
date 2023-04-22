@@ -43,7 +43,9 @@ function verifyToken(req, res, next) {
 }
 
 // books full list read
-router.get('/api/booklist', async (req, res) => {
+// router.get('/api/booklist', async (req, res) => {
+    router.get("/api/booklist", async (req, res) => {
+
     try {
 
         const list = await DATA.find()
@@ -55,7 +57,9 @@ router.get('/api/booklist', async (req, res) => {
 })
 
 // add book
-router.post('/api/addbook', async (req, res) => {   //to fetch and save data in server
+// router.post('/api/addbook', async (req, res) => {   //to fetch and save data in server
+router.post("/apiaddbook", async (req, res) => {   //to fetch and save data in server
+
 
     try {
         let item = req.body
@@ -93,7 +97,9 @@ router.post('/api/addbook', async (req, res) => {   //to fetch and save data in 
 })
 
 //delete book
-router.delete('/api/deletebook/:id', async (req, res) => {
+// router.delete('/api/deletebook/:id', async (req, res) => {
+    router.delete("/api/deletebook/:id", async (req, res) => {
+
 
     try {
         let id = req.params.id
@@ -109,7 +115,9 @@ router.delete('/api/deletebook/:id', async (req, res) => {
 })
 
 //book update
-router.put('/api/updatebook/:id', async (req, res) => {
+// router.put('/api/updatebook/:id', async (req, res) => {
+    router.put("/api/updatebook/:id", async (req, res) => {
+
 
     try {
         let id = req.params.id
@@ -133,7 +141,9 @@ router.put('/api/updatebook/:id', async (req, res) => {
 })
 
 //single book details
-router.get('/api/singlebook/:id', async (req, res) => {
+// router.get('/api/singlebook/:id', async (req, res) => {
+    router.get("/api/singlebook/:id", async (req, res) => {
+
     try {
 
         let id = req.params.id
@@ -145,7 +155,9 @@ router.get('/api/singlebook/:id', async (req, res) => {
 })
 
 // User Signup
-router.post('/api/adduser', async (req, res) => {   //to fetch and save data in server
+// router.post('/api/adduser', async (req, res) => {   //to fetch and save data in server
+    router.post("/api/adduser", async (req, res) => {   //to fetch and save data in server
+
     try {
         console.log(req.body)
 
@@ -165,7 +177,9 @@ router.post('/api/adduser', async (req, res) => {   //to fetch and save data in 
 })
 
 //User Login
-router.post('/api/auth', async (req, res) => {
+// router.post('/api/auth', async (req, res) => {
+    router.post("/api/auth", async (req, res) => {
+
     try {
         email = req.body.email
         password = req.body.password

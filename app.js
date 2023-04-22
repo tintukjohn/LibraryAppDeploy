@@ -9,12 +9,12 @@ var morgan = require('morgan')
 
 const app = new express()
 
-const path = require('path')
-app.use(express.static(`./dist/frontend`))
+const path = require('path');
+app.use(express.static(`./dist/frontend`)); 
 
-app.get(`/*`, function(req, res){
-    res.sendFile(path.join(__dirname +'/dist//frontend/index.html'))
-})
+app.get(`/*`, function(req, res) { 
+    res.sendFile(path.join(__dirname + 
+    '/dist//frontend/index.html')) })
 
 require('dotenv').config()
 require('./Middlewares/mongoDB')   //to init mongoDB
